@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johar Chhattisgarh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #ff8f00;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.2rem 5%; background: rgba(255,255,255,.85);
+            backdrop-filter: blur(12px); position: fixed; width: 100%; top: 0;
+            z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.05);
+        }
+        .logo {
+            font-size: 1.5rem; font-weight: 700; color: var(--primary);
+            text-decoration: none; display: flex; align-items: center;
+        }
+        .logo span { color: var(--secondary); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a {
+            text-decoration: none; color: var(--dark); font-weight: 500;
+            font-size: .95rem; transition: color .3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .hero {
+            min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            padding: 90px 20px 40px;
+            background: linear-gradient(135deg, rgba(46,125,50,.05), rgba(255,143,0,.08));
+        }
+        .hero h1 {
+            font-size: 5rem; font-weight: 800; color: var(--dark);
+            margin-bottom: 1rem; animation: fadeInUp 1s ease-out;
+        }
+        .hero h1 span {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem; max-width: 600px; color: #4b5563;
+            margin-bottom: 2.5rem; animation: fadeInUp 1.2s ease-out;
+        }
+        .btn {
+            padding: 14px 36px; border-radius: 50px; background: var(--primary);
+            color: var(--white); text-decoration: none; font-size: 1.1rem;
+            font-weight: 500; box-shadow: 0 10px 20px rgba(46,125,50,.2);
+            transition: all .3s ease; animation: fadeInUp 1.4s ease-out;
+        }
+        .btn:hover { transform: translateY(-3px); background: #256a28; }
+        .features { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title {
+            text-align: center; font-size: 2.5rem; margin-bottom: 3.5rem;
+            color: var(--dark); font-weight: 700;
+        }
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        .card {
+            background: var(--white); padding: 2.5rem; border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.03);
+            transition: all .3s ease; border: 1px solid rgba(0,0,0,.04);
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,.06); }
+        .card-icon {
+            font-size: 2.5rem; margin-bottom: 1.5rem; background: rgba(46,125,50,.1);
+            width: 70px; height: 70px; display: flex; align-items: center;
+            justify-content: center; border-radius: 16px;
+        }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; }
+        .card p { color: #6b7280; font-size: .95rem; }
+        footer {
+            text-align: center; padding: 2.5rem 2rem; background: var(--dark);
+            color: #9ca3af; font-size: .95rem; display: flex;
+            flex-direction: column; gap: 10px;
+        }
+        .footer-credit { font-weight: 500; color: #d1d5db; }
+        .ig-link {
+            display: inline-block; margin-top: 5px; color: var(--secondary);
+            text-decoration: none; font-weight: 600;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .nav-links { display: none; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="logo">Online<span>CG</span></a>
+        <div class="nav-links">
+            <a href="#home">होम</a>
+            <a href="#explore">विशेषताएँ</a>
+            <a href="#contact">संपर्क</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>जोहार <span>छत्तीसगढ़</span></h1>
+        <p>प्रकृति, संस्कृति और विकास का एक अद्भुत संगम। हमारी माटी की महक के साथ एक नई, मिनिमलिस्ट और पेशेवर डिजिटल पहचान।</p>
+        <a href="#explore" class="btn">एक्सप्लोर करें</a>
+    </header>
+
+    <section class="features" id="explore">
+        <h2 class="section-title">राज्य की झलक</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🌾</div>
+                <h3>कृषि और विकास</h3>
+                <p>धान के कटोरे के रूप में हमारी पहचान और ग्रामीण विकास की दिशा में बढ़ते कदम। यह हमारी अर्थव्यवस्था की मजबूत नींव है।</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⛰️</div>
+                <h3>प्राकृतिक सौंदर्य</h3>
+                <p>केशकाल की हरी-भरी घाटियों से लेकर बस्तर के मनमोहक जलप्रपातों तक, छत्तीसगढ़ प्रकृति की गोद में बसा एक खूबसूरत राज्य है।</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>आधुनिक दृष्टिकोण</h3>
+                <p>कला और परंपराओं को सहेजते हुए, तकनीक और आधुनिक मिनिमलिस्ट डिजाइन के साथ भविष्य की ओर बढ़ते हमारे कदम।</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p class="footer-credit">Designed & Developed by Pritam Vatti</p>
+        <a href="https://instagram.com/pritamvattii" target="_blank" rel="noopener" class="ig-link">Follow on IG: @pritamvattii</a>
+    </footer>
+</body>
+</html>
