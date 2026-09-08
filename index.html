@@ -1,153 +1,166 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johar Chhattisgarh</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2e7d32;
-            --secondary: #ff8f00;
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --white: #ffffff;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-        nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 1.2rem 5%; background: rgba(255,255,255,.85);
-            backdrop-filter: blur(12px); position: fixed; width: 100%; top: 0;
-            z-index: 1000; box-shadow: 0 1px 5px rgba(0,0,0,.05);
-        }
-        .logo {
-            font-size: 1.5rem; font-weight: 700; color: var(--primary);
-            text-decoration: none; display: flex; align-items: center;
-        }
-        .logo span { color: var(--secondary); }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a {
-            text-decoration: none; color: var(--dark); font-weight: 500;
-            font-size: .95rem; transition: color .3s;
-        }
-        .nav-links a:hover { color: var(--primary); }
-        .hero {
-            min-height: 100vh; display: flex; flex-direction: column;
-            justify-content: center; align-items: center; text-align: center;
-            padding: 90px 20px 40px;
-            background: linear-gradient(135deg, rgba(46,125,50,.05), rgba(255,143,0,.08));
-        }
-        .hero h1 {
-            font-size: 5rem; font-weight: 800; color: var(--dark);
-            margin-bottom: 1rem; animation: fadeInUp 1s ease-out;
-        }
-        .hero h1 span {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text; background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero p {
-            font-size: 1.2rem; max-width: 600px; color: #4b5563;
-            margin-bottom: 2.5rem; animation: fadeInUp 1.2s ease-out;
-        }
-        .btn {
-            padding: 14px 36px; border-radius: 50px; background: var(--primary);
-            color: var(--white); text-decoration: none; font-size: 1.1rem;
-            font-weight: 500; box-shadow: 0 10px 20px rgba(46,125,50,.2);
-            transition: all .3s ease; animation: fadeInUp 1.4s ease-out;
-        }
-        .btn:hover { transform: translateY(-3px); background: #256a28; }
-        .features { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
-        .section-title {
-            text-align: center; font-size: 2.5rem; margin-bottom: 3.5rem;
-            color: var(--dark); font-weight: 700;
-        }
-        .grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-        .card {
-            background: var(--white); padding: 2.5rem; border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.03);
-            transition: all .3s ease; border: 1px solid rgba(0,0,0,.04);
-        }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,.06); }
-        .card-icon {
-            font-size: 2.5rem; margin-bottom: 1.5rem; background: rgba(46,125,50,.1);
-            width: 70px; height: 70px; display: flex; align-items: center;
-            justify-content: center; border-radius: 16px;
-        }
-        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; }
-        .card p { color: #6b7280; font-size: .95rem; }
-        footer {
-            text-align: center; padding: 2.5rem 2rem; background: var(--dark);
-            color: #9ca3af; font-size: .95rem; display: flex;
-            flex-direction: column; gap: 10px;
-        }
-        .footer-credit { font-weight: 500; color: #d1d5db; }
-        .ig-link {
-            display: inline-block; margin-top: 5px; color: var(--secondary);
-            text-decoration: none; font-weight: 600;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3.5rem; }
-            .nav-links { display: none; }
-            .hero p { font-size: 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Online CG - एक आधुनिक और तेज़ वेबसाइट।">
+  <title>Online CG | Welcome</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:#070b16;color:#eef2ff;line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(7,11,22,.78);backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,.08)
+    }
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.35rem;font-weight:800;letter-spacing:.5px}
+    .logo span{color:#7c8cff}
+    .navlinks{display:flex;gap:28px;color:#b9c1d9;font-size:.95rem}
+    .navlinks a:hover{color:#fff}
+    .menu{display:none;background:none;border:0;color:#fff;font-size:1.6rem}
+    .hero{padding:100px 0 85px;position:relative;overflow:hidden}
+    .glow{
+      position:absolute;width:420px;height:420px;border-radius:50%;
+      background:#536dff;filter:blur(140px);opacity:.18;right:-120px;top:-80px
+    }
+    .badge{
+      display:inline-flex;padding:8px 14px;border:1px solid rgba(124,140,255,.35);
+      border-radius:999px;color:#bfc7ff;background:rgba(124,140,255,.08);font-size:.88rem
+    }
+    h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.02;max-width:850px;margin:22px 0}
+    h1 span{background:linear-gradient(90deg,#fff,#8e9bff);-webkit-background-clip:text;color:transparent}
+    .hero p{max-width:650px;color:#aab3ca;font-size:1.08rem}
+    .actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+    .btn{padding:13px 20px;border-radius:12px;font-weight:700;display:inline-block}
+    .primary{background:#7282ff;color:white;box-shadow:0 10px 30px rgba(114,130,255,.22)}
+    .secondary{border:1px solid rgba(255,255,255,.14);color:#e7eaff;background:rgba(255,255,255,.03)}
+    section{padding:80px 0}
+    .section-title{text-align:center;font-size:2rem;margin-bottom:12px}
+    .section-sub{text-align:center;color:#9ca7c0;max-width:650px;margin:0 auto 42px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      padding:28px;border:1px solid rgba(255,255,255,.09);border-radius:20px;
+      background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018))
+    }
+    .icon{font-size:1.8rem;margin-bottom:15px}
+    .card h3{margin-bottom:8px}.card p{color:#9ca7c0}
+    .about{
+      display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center
+    }
+    .panel{
+      padding:35px;border:1px solid rgba(255,255,255,.09);border-radius:24px;
+      background:rgba(255,255,255,.035)
+    }
+    .panel p{color:#aab3ca;margin-top:12px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+    .stat{text-align:center;padding:18px;border-radius:16px;background:rgba(255,255,255,.04)}
+    .stat b{font-size:1.5rem;display:block}.stat small{color:#8f9ab4}
+    .contact{text-align:center}
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0;color:#7f8aa4;text-align:center}
+    @media(max-width:760px){
+      .navlinks{display:none}.menu{display:block}
+      .hero{padding:75px 0 60px}
+      .cards,.about{grid-template-columns:1fr}
+      section{padding:60px 0}
+      .stats{grid-template-columns:1fr 1fr 1fr}
+    }
+  </style>
 </head>
 <body>
+<header>
+  <div class="container">
     <nav>
-        <a href="#home" class="logo">Online<span>CG</span></a>
-        <div class="nav-links">
-            <a href="#home">होम</a>
-            <a href="#explore">विशेषताएँ</a>
-            <a href="#contact">संपर्क</a>
-        </div>
+      <a class="logo" href="#">Online<span>CG</span></a>
+      <div class="navlinks">
+        <a href="#home">होम</a>
+        <a href="#features">खासियत</a>
+        <a href="#about">हमारे बारे में</a>
+        <a href="#contact">संपर्क</a>
+      </div>
+      <button class="menu" aria-label="Menu" onclick="toggleMenu()">☰</button>
     </nav>
+  </div>
+</header>
 
-    <header class="hero" id="home">
-        <h1>जोहार <span>छत्तीसगढ़</span></h1>
-        <p>प्रकृति, संस्कृति और विकास का एक अद्भुत संगम। हमारी माटी की महक के साथ एक नई, मिनिमलिस्ट और पेशेवर डिजिटल पहचान।</p>
-        <a href="#explore" class="btn">एक्सप्लोर करें</a>
-    </header>
+<main>
+  <section class="hero" id="home">
+    <div class="glow"></div>
+    <div class="container">
+      <div class="badge">✨ आपका डिजिटल प्लेटफॉर्म</div>
+      <h1>Simple. Fast. <span>Professional.</span></h1>
+      <p>एक साफ-सुथरी, तेज़ और मोबाइल-फ्रेंडली वेबसाइट — आपके ब्रांड या प्रोजेक्ट को प्रोफेशनल अंदाज़ में दिखाने के लिए।</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">शुरू करें →</a>
+        <a class="btn secondary" href="#features">और जानें</a>
+      </div>
+    </div>
+  </section>
 
-    <section class="features" id="explore">
-        <h2 class="section-title">राज्य की झलक</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon">🌾</div>
-                <h3>कृषि और विकास</h3>
-                <p>धान के कटोरे के रूप में हमारी पहचान और ग्रामीण विकास की दिशा में बढ़ते कदम। यह हमारी अर्थव्यवस्था की मजबूत नींव है।</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">⛰️</div>
-                <h3>प्राकृतिक सौंदर्य</h3>
-                <p>केशकाल की हरी-भरी घाटियों से लेकर बस्तर के मनमोहक जलप्रपातों तक, छत्तीसगढ़ प्रकृति की गोद में बसा एक खूबसूरत राज्य है।</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">✨</div>
-                <h3>आधुनिक दृष्टिकोण</h3>
-                <p>कला और परंपराओं को सहेजते हुए, तकनीक और आधुनिक मिनिमलिस्ट डिजाइन के साथ भविष्य की ओर बढ़ते हमारे कदम।</p>
-            </div>
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title">हमारी खासियत</h2>
+      <p class="section-sub">आधुनिक डिजाइन, बेहतर अनुभव और हर स्क्रीन पर शानदार लुक।</p>
+      <div class="cards">
+        <div class="card"><div class="icon">⚡</div><h3>तेज़ स्पीड</h3><p>हल्का और optimized design ताकि वेबसाइट जल्दी खुले।</p></div>
+        <div class="card"><div class="icon">📱</div><h3>Mobile Friendly</h3><p>मोबाइल, टैबलेट और कंप्यूटर सभी पर responsive layout।</p></div>
+        <div class="card"><div class="icon">🔒</div><h3>सुरक्षित अनुभव</h3><p>साफ-सुथरा frontend और सुरक्षित HTTPS-ready setup।</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div>
+        <h2 class="section-title" style="text-align:left">आपका आइडिया,<br>एक प्रोफेशनल वेबसाइट।</h2>
+        <p class="section-sub" style="text-align:left;margin-left:0">इस template को आप अपने नाम, फोटो, services, links और contact details के साथ आसानी से customize कर सकते हैं।</p>
+      </div>
+      <div class="panel">
+        <h3>OnlineCG</h3>
+        <p>यहाँ अपने प्रोजेक्ट या वेबसाइट के बारे में छोटा और आकर्षक परिचय लिखें।</p>
+        <div class="stats">
+          <div class="stat"><b>100%</b><small>Responsive</small></div>
+          <div class="stat"><b>Fast</b><small>Loading</small></div>
+          <div class="stat"><b>24/7</b><small>Online</small></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer id="contact">
-        <p class="footer-credit">Designed & Developed by Pritam Vatti</p>
-        <a href="https://instagram.com/pritamvattii" target="_blank" rel="noopener" class="ig-link">Follow on IG: @pritamvattii</a>
-    </footer>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">कनेक्ट करें</h2>
+      <p class="section-sub">नीचे अपना WhatsApp, Instagram, Email या कोई दूसरा लिंक जोड़ सकते हैं।</p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn primary" href="https://onlinecg.run.place/">Website खोलें</a>
+        <a class="btn secondary" href="mailto:your@email.com">Email करें</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© <span id="year"></span> OnlineCG. सभी अधिकार सुरक्षित।</div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu(){
+    const links=document.querySelector(".navlinks");
+    links.style.display = links.style.display==="flex" ? "none" : "flex";
+    if(links.style.display==="flex"){
+      links.style.position="absolute"; links.style.top="72px"; links.style.left="0";
+      links.style.right="0"; links.style.padding="20px";
+      links.style.background="#0b1020"; links.style.flexDirection="column";
+    }
+  }
+</script>
 </body>
 </html>
